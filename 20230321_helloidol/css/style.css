@@ -1,3 +1,43 @@
 body {
     background-color: beige;
 }
+h1, h2 {
+    background-color: plum;
+}
+h1 ~ h2 {
+    background-color: plum;
+}
+ul, ol, li {
+    color : #333;
+    font-size : 32px;
+}
+.korea {
+    color : skyblue;
+}
+.japen {
+    color : crimson;
+}
+.incheon {
+    color : darkblue;
+}
+.leader {
+    color : purple;
+}
+#underline {
+    text-decoration: underline;
+}
+.even {
+    background-color: #eee;
+}
+.drainage {
+    background-color: #aaa;
+}
+h5 ~ h6 {
+    list-style-type: none;
+}
+text {
+    background-color: aqua;
+}
+.two {
+    text-decoration: overline;
+}
