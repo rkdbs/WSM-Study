@@ -1,43 +1,64 @@
 body {
-    background-color: beige;
+    background-color: khaki;
 }
-h1, h2 {
-    background-color: plum;
-}
+/* h1의 자매인 모든 h2에 plum 배경색 */
 h1 ~ h2 {
     background-color: plum;
 }
-ul, ol, li {
-    color : #333;
-    font-size : 32px;
+/* h1의 자매 중 첫 번째 h2만 plum배경색 */
+h1 + h2 { /*h1 + h3 -> h3는 h1의 첫 번째 자매가 아니기 때문에 선택 안 됨*/
+    background-color: plum;
 }
+/* h1과 h2는 plum 배경색 */
+h1,
+h2{
+    background-color: plum;
+}
+
+h5 ~ h6,
+ol,
+ul { /*사실 ul > li임*/
+    color: #333;
+    font-size: 32px; /*시험 -> font-color X, size X*/
+}
+
 .korea {
     color : skyblue;
 }
-.japen {
-    color : crimson;
+
+.japan,
+.canada {
+    color :crimson;
 }
-.incheon {
-    color : darkblue;
+
+.incheon { /*incheon을 나중에 적용해서 '03년생' 색은 darkblue가 됨*/
+    color :darkblue;
 }
+
 .leader {
-    color : purple;
+    color: purple;
 }
-#underline {
+
+li:nth-child(5) { /*li의 다섯번째 멤버에게 밑줄*/
     text-decoration: underline;
 }
-.even {
+
+li:nth-child(even) { /*짝수행 background-color를 #eee로 지정 / odd : 홀수, even : 짝수*/
     background-color: #eee;
-}
-.drainage {
+} /*li:nth-child(2n)으로 해도 짝수로 지정 가능*/
+
+li:nth-child(5n) { /*5의 배수의 background-color를 #aaa로 지정*/
     background-color: #aaa;
 }
-h5 ~ h6 {
-    list-style-type: none;
-}
-text {
+
+[type="text"] {
     background-color: aqua;
 }
-.two {
+
+ul:nth-child(3) > li:nth-child(2) : :hover{ /*ul이 아니어도 셈. -> h1부터 세는 것. -> 두 번째 ul은 3으로 지정해야 함*/
     text-decoration: overline;
+}
+
+body > div:nth-child(8) > ul:nth-child(3) > li:nth-child(2){
+    font-size: 8px;
 }
