@@ -1,0 +1,118 @@
+/* 구글 폰트 사용 */
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;400;700&display=swap");
+
+/* Variables CSS */
+:root {
+    /* color */
+    --first-color : #008156;
+    --second-color : #efb11c;
+    --body-color : #fff;
+
+    /* font */
+    --body-font : "Hahmlet", serif;
+    --h1-font-size : 2rem;
+    --h2-font-size : 1.5rem;
+    --h3-font-size : 1.25rem;
+    --normal-font-size : 1rem;
+    --small-font-size : 0.8rem;
+    --smaller-font-size : 0.6rem;
+
+    --font-thin : 200;
+    --font-regular : 400;
+    --font-bold : 700;
+}
+
+body { 
+    font-family : var(--body-font); /* Hahmlet 폰트 적용 */
+    font-size : var(--normal-font-size);
+    color: #000;
+}
+
+header {
+    background-color : var(--first-color);
+    position : fixed; /* 스크롤 해도 항상 위치 고정 */
+    top : 0;
+    right : 0; /* 오른쪽 끝까지 */
+    left : 0; /* 왼쪽 끝까지 늘리기 */
+}
+
+nav {
+    height : 44px;
+}
+
+.nav.container {
+    display : flex; /* 기본값 : 수평정렬 */
+    justify-content : space-between; /* 펼치기 */
+    align-items : center; /* 교차축 가운데 맞춤 */
+    padding : 0 16px; /* 위아래 0, 좌우 16 */
+    color : #fff;
+}
+
+.nav.container a { /* nav.container안에 있는 a */
+    color : #fff;
+}
+
+.nav-logo {
+    font-size : var(--h2-font-size);
+}
+
+.nav-list {
+    display : flex; /* 수평 배치 */
+    column-gap: 80px; /* gap : 간격, 글자 사이 간격 */
+    font-weight: var(--font-bold);
+}
+
+.nav-toggle {
+    font-size : var(--h2-font-size);
+    visibility : hidden;
+}
+
+/* tablet */
+@media screen and (max-width: 720px) {
+
+    
+}
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    .nav-logo { /* .nav-logo 가운데로 */
+        margin : 0 auto; /* 여백만큼 알아서 but 햄버거 메뉴 크기를 제외하고 밀어짐 -> nav.toggle에서 position, right 속성값주기 */
+    }
+    
+    .nav-list { /* .nav-list 아래로, 안 보이게 */
+        position : absolute; /* 절대값(0,0) */
+        top : 44px;
+        right : 0; /* 오른쪽 끝까지 */
+        left : 0; /* 왼쪽 끝까지 */
+        flex-direction: column; /* .nav-item 수직 배열 */
+        /* align-items: center; /* 수평 가운데 정렬, 교차축 */
+        text-align: center; /* 글자 가운데 정렬 */
+        background-color: rgba(239, 177, 28, 0.4);
+        backdrop-filter: blur(4px);
+        height : 0; /* 처음에 안 보이게 */
+        transition: all 0.4s; /* s : second */
+        overflow: hidden;
+    }
+
+    .nav-item {
+        padding : 1em 0; /* item들의 위아래 여백 1em(=16px) */
+        border-bottom: 2px solid #fff;
+    }
+
+    .nav-link {
+        display: block; /* link를 양옆으로 넓게 */
+    }
+
+    .nav-toggle { /* .nav-toggle 보이게 */
+        visibility: visible;
+        position: absolute; /* 햄버거 메뉴 공간을 차지하지 않게 .nav-logo를 가운데로 */
+        right : 16px; /* 햄버거 메뉴 원위치 */
+        cursor: pointer;
+    }
+
+    /* .show-menu하면, .nav-list 보이게 */
+    /* .show-menu하면, .nav-toggle의 모양 X자로 */
+    .show-menu {
+        height : 170px;
+    }
+}
