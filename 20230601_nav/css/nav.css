@@ -91,6 +91,7 @@ nav {
         backdrop-filter: blur(4px);
         height : 0; /* 처음에 안 보이게 */
         transition: all 0.4s; /* s : second */
+        overflow: hidden;
     }
 
     .nav-item {
@@ -106,6 +107,7 @@ nav {
         visibility: visible;
         position: absolute; /* 햄버거 메뉴 공간을 차지하지 않게 .nav-logo를 가운데로 */
         right : 16px; /* 햄버거 메뉴 원위치 */
+        cursor: pointer;
     }
 
     /* .show-menu하면, .nav-list 보이게 */
