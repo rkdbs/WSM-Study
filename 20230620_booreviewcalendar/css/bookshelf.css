@@ -15,13 +15,13 @@
     align-items: flex-end; /* 교차축 밑에 정렬 */
 }
 
-.book-item > img {
+.book-item img {
     width : 150px;
     box-shadow: 0 16px 32px #dddddd; /* p1(x좌표) p2(y좌표) p3(번지는 정도) p4(색깔)*/
     transition: all 0.2s;
 }
 
-.book-item > img:hover {
+.book-item img:hover {
     transform: translateY(-4px);
     box-shadow: 0 24px 48px #E1E1E1;
 }
