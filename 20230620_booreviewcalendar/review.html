@@ -1,112 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Review Calendar - review</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/review.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/review.css">
+</head>
+<body>
     <header>
-      <!-- 약어 사용 : nav.nav.container  두개의 클래스를 나타낼 때 띄어쓰기 사용 -->
-      <nav class="nav container">
-        <a href="" class="nav-logo">
-            <i class="bi bi-book"></i>
-        </a>
-        <ul class="nav-list">
-          <!-- li.nav-item.a>a.nav-link*3 -->
-          <li class="nav-item a"><a href="" class="nav-link">책장</a></li>
-          <li class="nav-item a"><a href="" class="nav-link">리뷰</a></li>
-          <li class="nav-item a"><a href="" class="nav-link">캘린더</a></li>
-        </ul>
-        <!-- .nav-toggle : 이것만 써도 div 가 앞에 붙는다.  -->
-        <!-- 토글 : on/off 가 되는 버튼. 누르면 켜지고 누르면 꺼지고.. -->
-        <div class="nav-toggle" id="nav_toggle">
-          <i class="bi bi-list"></i>
-        </div>
-      </nav>
+        <nav class="nav container">
+            <a href="" class="nav-logo">
+                <i class="bi bi-book"></i>
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="" class="nav-link">책장</a></li>
+                <li class="nav-item"><a href="" class="nav-link">리뷰</a></li>
+                <li class="nav-item"><a href="" class="nav-link">캘린더</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav_toggle">
+                <i class="bi bi-list"></i>
+            </div>
+        </nav>
     </header>
 
-    <!-- 약어 : 1. content1, content2, content3만들기, 2. title아래에 subject와 detail만들기-->
-    <!-- .content$*3-->
-    <!-- .title>.subject+.detail-->
-
-    <!--여러 개의 클래스를 넣을 때 , + 이런거 아니고 띄어쓰기 ex) class="title label" title클래스와 label클래스
-    만들 땐 .title.label (.title label 아님)-->
-
     <main id="review">
-      <div class="image-info-groups container">
-        <div class="book-image">
-          이미지 (.book-image)
-        </div>
-        <div class="info-groups container">
-          <div class="info-group container">
-            <div class="info container">
-              <div class="title label">
-                제목 (.title.label)
-              </div>
-              <div class="title">
-                세이노의 가르침 (.title)
-              </div>
+        <div class="image-info-groups container">
+            <div class="book-image">
+                .book-image
             </div>
-            <div class="info container">
-              <div class="author label">
-                저자 (.author.label)
-              </div>
-              <div class="author">
-                세이노 (.author)
-              </div>
+            <div class="info-groups container">
+                <div class="info-group container">
+                    <div class="info container">
+                        <div class="title label">
+                            .title.label
+                        </div>
+                        <div class="title">
+                            .title
+                        </div>
+                    </div>
+                    <div class="info container">
+                        <div class="author label">
+                            .author.label
+                        </div>
+                        <div class="author">
+                            .author
+                        </div>
+                    </div>
+                </div>
+                <div class="info-group container">
+                    <div class="info container">
+                        <div class="publisher label">
+                            .publisher.label
+                        </div>
+                        <div class="publisher">
+                            .publisher
+                        </div>
+                    </div>
+                    <div class="info container">
+                        <div class="read-date label">
+                            .read-date.label
+                        </div>
+                        <div class="read-date">
+                            .read-date
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="info-group container">
-            <div class="info container">
-              <div class="publisher label">
-                출판사 (.publisher.label)
-              </div>
-              <div class="publisher">
-                세이노출판사 (.publisher)
-              </div>
+        </div>
+        <div class="reviews container">
+            <div class="reviews container">
+                <div class="review container">
+                    <div class="synopsis label">
+                        .synopsis.label
+                    </div>
+                    <div class="synopsis">
+                        .synopsis
+                    </div>
+                </div>
+                <div class="review container">
+                    <div class="phrase label">
+                        .phrase.label
+                    </div>
+                    <div class="phrase">
+                        .phrase
+                    </div>
+                </div>
             </div>
-            <div class="info container">
-              <div class="read-data label">
-                읽은 날짜 (.read-data.label)
-              </div>
-              <div class="read-data">
-                2023.08.03 (.read-data)
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="reviews container">
-        <div class="review container">
-          <div class="synopsis label">
-            줄거리 (.synopsis.label)
-          </div>
-          <div class="synopsis">
-            세이노가 귀요미다 (.synopsis)
-          </div>
-        </div>
-        <div class="review container">
-          <div class="phrase label">
-            마음에 드는 구절 (.phrase.label)
-          </div>
-          <div class="phrase">
-            "나는 기요미 세이노" (.phrase)
-          </div>
-        </div>
-      </div>
     </main>
 
     <script src="js/nav.js"></script>
     <script src="js/data.js"></script>
     <script src="js/review.js"></script>
-  </body>
+</body>
 </html>
