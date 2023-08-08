@@ -2,6 +2,11 @@ main{
     margin-top: calc(44px + 100px); /* 띄어쓰기 꼭 하기 */
 }
 
+img {
+    max-width: 100%;
+    height : auto;
+}
+
 .container{
     display: flex;
 }
