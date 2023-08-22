@@ -54,5 +54,20 @@ publisherDiv.innerHTML = publisher;
 const bookImageDiv = document.getElementsByClassName("book-image")[0];
 bookImageDiv.innerHTML = `<img src="${bookImage}" />`;
 
+const readDateDiv = document.getElementsByClassName("read-data")[1];
+
+let now = "2030년 8월 17일";
+now = new Date();    // 현재 날짜와 시각 객체
+let year = now.getFullYear();
+let month = now.getMonth() + 1;
+let date = now.getDate();
+let day = now.getDay();
+let weeks = ["일", "월", "화", "수", "목", "금", "토"];
+day = weeks[day] + "요일";
+
+now = `${year}년 ${month}월 ${date}일 ${day}`;
+
+readDateDiv.innerHTML = now;
+
 // let name = "최유진";
 // console.log('안녕, ${name}');
