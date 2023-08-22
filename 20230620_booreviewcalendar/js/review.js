@@ -8,6 +8,13 @@ let url_href = window.location.href; // 브라우저 창에 있는 주소
 const bookId = new URL(url_href).searchParams.get("book");
 console.log('bookId: ${bookId}, type: ${typeof bookId}'); // "3", string
 
+// bookId가 null이면, index.html로 가자
+if(bookId === null){
+    location.href = "index.html";
+    // window.open("index.html",target="_top"); //새로운 창 열려서 이동하는 문제 해결
+    // window.location.href = "index.html";
+}
+
 // -> string을 number로 변환 : bookIdNumber
 // let bookIdNumber = Number(bookId); // 방법1
 // let bookIdNumber = parseInt(bookId); // 방법2
