@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.weekday {
+    background-color: coral;
+}
+
+.item {
+    border: 2px solid darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgreen;
+    text-align: center; /* flex한 하나의 아이템 안에 텍스트를 가운데 정렬하자  */
+}
+
+.item:nth-child(7),
+.item:nth-child(13),
+.item:nth-child(18),
+.item:nth-child(23),
+.item:nth-child(27),
+.item:nth-child(33),
+.item:nth-child(37)
+/* .item:nth-child(6n+7) 7+6n X */
+ {
+    background-color: khaki;
+}
+
+.item:nth-child(12) { /* 금 DS */
+    /* background-color: red; */
+    grid-column: 6 / 7; /* start: 6, end: 7 or 7 / 6 or -1 / -2 or -2 / -1 */
+    grid-row: 2/ 4; /* 4 / 2 */
+}
+
+.item:nth-child(17) { /* 목 WSM */
+    /* background-color: red; */
+    grid-column: 5 / 6; 
+    grid-row: 3 / span 2; /* span 2 / 5 or 3 / 5 or -5 / /7 ! 시험문제 ! */
+}
+
+.item:nth-child(19) { /* 월 PHP Python */
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+}
+
+.item:nth-child(21) { /* 수 코딩 */
+    grid-column: 4 / 5;
+    grid-row: 4 / 6;
+}
+
+.item:nth-child(28) { /* 월 Java */
+    grid-column: 2 / 3;
+    grid-row: 6 / 8;
+}
+
+.item:nth-child(32) { /* 금 웹표준 블록체인 */
+    grid-column: 6 / 7;
+    grid-row: 6 / 8;
+}
+
+.item:nth-child(34) { /* 화 WSM */
+    grid-column: 3 / 4;
+    grid-row: 7 / 9;
+}
+
+.item:nth-child(35) { /* 수 동아리 멘토링 */
+    grid-column: 4 / 5;
+    grid-row: 7 / 9;
+}
