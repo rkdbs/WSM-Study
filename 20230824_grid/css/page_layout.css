@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container * { /* container 밑 모두 다 */
+    border: 2px solid black;
+}
+
+figure > img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover; /* 시험문제, contain : 여백 생김, 비율 유지, cover : 앨범 커버처럼 잘려서 들어감 */
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 3fr 1fr; /* 200px 3배 1배의 열 */
+    grid-template-rows: 44px 1fr 80px;
+    grid-template-areas: 
+    "header header header"
+    "side_left  main   side2"
+    "footer footer footer";
+}
+
+.header {
+    background-color: skyblue;
+    grid-area: header;
+}
+
+.side1 {
+    background-color: beige;
+    grid-area: side_left;
+}
+
+.main {
+    background-color: wheat;
+    grid-area: main;
+}
+
+.side2 {
+    background-color: rosybrown;
+    grid-area: side2;
+}
+
+.footer {
+    background-color: lavenderblush;
+    grid-area: footer;
+}
