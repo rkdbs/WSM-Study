@@ -1,5 +1,8 @@
 main {
+    margin: 0 auto;
     margin-top: calc(44px + 100px); /* margin-top: 144px; X */
+    width: calc(100% - 100px * 2);
+    max-width: 600px;
 }
 
 .title.flex-container {
@@ -7,6 +10,7 @@ main {
     font-size: 2rem;
     justify-content: center;
     column-gap: 40px;
+    margin-bottom: 20px;
 }
 
 .weekday.container {
@@ -14,9 +18,59 @@ main {
     grid-template-columns: repeat(7, 1fr);
     font-size: 1.5rem;
     text-align: center;   
+    background-color: skyblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dates.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.date.item {
+    padding: 10px;
+    aspect-ratio: 1/1; /* 1:1 비율(정사각형) */
+    display: grid; /* 글자 수직, 수평 가운데로 */
+    place-items: center; /* 글자 수직, 수평 가운데로 */
+    /* display: flex; 글자 수직, 수평 가운데로 */
+    /* justify-content: center; 글자 수직, 수평 가운데로 */
+    /* align-items: center; 글자 수직, 수평 가운데로 */
+}
+
+.date.item:nth-child(1) {
+    grid-column-start: 6; /* 열 1 -> 6 */
+}
+
+/* 오늘 포커싱 */
+
+.review.flex-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    row-gap: 10px;
+    background-color: skyblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* tablet */
+@media screen and (max-width: 720px) {
+
+}
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    main {
+        margin-top: calc(44px + 40px);
+        width: calc(100% - 10px * 2);
+    }
 }
 
 /* delete me */
-main * {
+/* main * {
     border: 2px solid black;
-}
+} */
