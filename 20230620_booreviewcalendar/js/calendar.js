@@ -48,6 +48,18 @@ const setCalendar = (year, month) => {
     // CSS { grid-column-start: firstDateDay + 1; }
     firstDateDiv.style.gridColumnStart = firstDateDay + 1;
 
+    // 토 : 파랑
+    let saturdayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${7-firstDateDay})`);
+    for (let dateItem of saturdayDivs) {
+        dateItem.style.color = "blue";
+    }
+
+    // 일 : 빨강
+    let sundayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${(8-firstDateDay)%7})`);
+    for (let dateItem of sundayDivs) {
+        dateItem.style.color = "red";
+    }
+
 }
 setCalendar(year, month);
 
@@ -75,5 +87,13 @@ rightDiv.onclick = () => {
         year++;
         month = 1;
     }
+    setCalendar(year, month);
+}
+
+const thismonthDiv = document.getElementsByClassName("month")[0];
+thismonthDiv.onclick = () => {
+    now = new Date();
+    year = now.getFullYear();
+    month = now.getMonth()+1;
     setCalendar(year, month);
 }
